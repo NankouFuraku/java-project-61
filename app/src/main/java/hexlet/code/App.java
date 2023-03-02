@@ -21,6 +21,9 @@ class App {
             case "2":
                 GameEven.even();
                 break;
+            case "3":
+
+                break;
         }
     }
 }
