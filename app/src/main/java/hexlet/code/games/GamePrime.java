@@ -7,7 +7,7 @@ public class GamePrime {
         if (number < 2) {
             return "no";
         }
-        for (var i = 2; i <= number; i++) {
+        for (var i = 2; i <= number / 2; i++) {
             if (number % i == 0) {
                 return "no";
             }
@@ -21,7 +21,7 @@ public class GamePrime {
 
         for (var i =0; i < 3; i++) {
             var randomNumber = 1 + (int) (Math.random() * 100);
-            questions[i] = "" + (randomNumber);
+            questions[i] = "" + randomNumber;
             correctAnswers[i] = isPrime(randomNumber);
         }
 
