@@ -15,15 +15,15 @@ public class GameCalc {
 
             switch (operator) {
                 case 1:
-                    questions[i] = "" + num1 + "+" + num2;
+                    questions[i] = "" + num1 + " + " + num2;
                     correctAnswers[i] = Integer.toString(num1 + num2);
                     break;
                 case 2:
-                    questions[i] = "" + num1 + "-" + num2;
+                    questions[i] = "" + num1 + " - " + num2;
                     correctAnswers[i] = Integer.toString(num1 - num2);
                     break;
                 case 3:
-                    questions[i] = "" + num1 + "*" + num2;
+                    questions[i] = "" + num1 + " * " + num2;
                     correctAnswers[i] = Integer.toString(num1 * num2);
                     break;
             }

@@ -28,7 +28,7 @@ public class GameProgression {
 
             var result = "";
             for (var counter = 0; counter < 10; counter++) {
-                result = result + " " + numbers[counter];
+                result = result + numbers[counter] + " ";
             }
             questions[i] = result;
         }
