@@ -15,7 +15,7 @@ public class Engine {
 
         var i = 0;
         while (i < 3) {
-            System.out.print("Question:");
+            System.out.print("Question: ");
             System.out.println(questions[i]);
             System.out.print("Your answer: ");
             String playerAnswer = scanner.next();
