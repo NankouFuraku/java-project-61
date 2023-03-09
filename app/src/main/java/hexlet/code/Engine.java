@@ -14,7 +14,9 @@ public class Engine {
         System.out.println(task);
 
         var i = 0;
-        while (i < 3) {
+        final var gameRounds = 3;
+
+        while (i < gameRounds) {
             System.out.print("Question: ");
             System.out.println(questions[i]);
             System.out.print("Your answer: ");

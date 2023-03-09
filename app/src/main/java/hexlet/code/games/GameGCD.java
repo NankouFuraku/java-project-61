@@ -9,21 +9,22 @@ public class GameGCD {
         while (divisor > 0) {
             if (num1 % divisor == 0 && num2 % divisor == 0) {
                 return divisor;
-            }
-            else {
+            } else {
                 divisor--;
             }
         }
         return divisor;
     }
-    public static void GCD() {
+    public static void gcd() {
         var task = "Find the greatest common divisor of given numbers.";
-        String[] questions = new String[3];
-        String[] correctAnswers = new String[3];
+        final var gameRounds = 3;
+        String[] questions = new String[gameRounds];
+        String[] correctAnswers = new String[gameRounds];
+        final var maxNumber = 100;
 
-        for (var i = 0; i < 3; i++) {
-            var num1 = 1 + (int) (Math.random() * 100);
-            var num2 = 1 + (int) (Math.random() * 100);
+        for (var i = 0; i < gameRounds; i++) {
+            var num1 = 1 + (int) (Math.random() * maxNumber);
+            var num2 = 1 + (int) (Math.random() * maxNumber);
 
             questions[i] = "" + num1 + " " + num2;
             correctAnswers[i] = Integer.toString(getDivisor(num1, num2));
