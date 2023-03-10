@@ -17,7 +17,6 @@ class App {
         System.out.print("Your choice: ");
         String gameOption = scanner.next();
 
-
         switch (gameOption) {
             case "1":
                 Cli.greeting();
@@ -40,5 +39,7 @@ class App {
             default:
                 break;
         }
+
+        scanner.close();
     }
 }

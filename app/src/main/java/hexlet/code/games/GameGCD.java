@@ -17,14 +17,16 @@ public class GameGCD {
     }
     public static void gcd() {
         var task = "Find the greatest common divisor of given numbers.";
-        final var gameRounds = 3;
-        String[] questions = new String[gameRounds];
-        String[] correctAnswers = new String[gameRounds];
-        final var maxNumber = 100;
+        final var roundsCount = 3;
+        final var maxRandomNumber = 100;
 
-        for (var i = 0; i < gameRounds; i++) {
-            var num1 = 1 + (int) (Math.random() * maxNumber);
-            var num2 = 1 + (int) (Math.random() * maxNumber);
+        String[] questions = new String[roundsCount];
+        String[] correctAnswers = new String[roundsCount];
+
+
+        for (var i = 0; i < roundsCount; i++) {
+            var num1 = 1 + (int) (Math.random() * maxRandomNumber);
+            var num2 = 1 + (int) (Math.random() * maxRandomNumber);
 
             questions[i] = "" + num1 + " " + num2;
             correctAnswers[i] = Integer.toString(getDivisor(num1, num2));

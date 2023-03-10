@@ -5,16 +5,17 @@ import hexlet.code.Engine;
 public class GameCalc {
     public static void calc() {
         var task = "What is the result of the expression?";
-        final var gameRounds = 3;
-        String[] questions = new String[gameRounds];
-        String[] correctAnswers = new String[gameRounds];
+        final var roundsCount = 3;
+        final var maxRandomNumber = 100;
+        final var operatorsCount = 3;
 
-        for (var i = 0; i < gameRounds; i++) {
-            final var maxNumber = 100;
-            final var numberOfOperators = 3;
-            var operator = 1 + (int) (Math.random() * numberOfOperators);
-            var num1 = 1 + (int) (Math.random() * maxNumber);
-            var num2 = 1 + (int) (Math.random() * maxNumber);
+        String[] questions = new String[roundsCount];
+        String[] correctAnswers = new String[roundsCount];
+
+        for (var i = 0; i < roundsCount; i++) {
+            var operator = 1 + (int) (Math.random() * operatorsCount);
+            var num1 = 1 + (int) (Math.random() * maxRandomNumber);
+            var num2 = 1 + (int) (Math.random() * maxRandomNumber);
 
             if (operator == 1) {
                 questions[i] = "" + num1 + " + " + num2;

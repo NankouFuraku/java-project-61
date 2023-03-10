@@ -16,13 +16,14 @@ public class GamePrime {
     }
     public static void prime() {
         var task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        final var gameRounds = 3;
-        String[] questions = new String[gameRounds];
-        String[] correctAnswers = new String[gameRounds];
-        final var maxNumber = 100;
+        final var roundsCount = 3;
+        final var maxRandomNumber = 100;
 
-        for (var i = 0; i < gameRounds; i++) {
-            var randomNumber = 1 + (int) (Math.random() * maxNumber);
+        String[] questions = new String[roundsCount];
+        String[] correctAnswers = new String[roundsCount];
+
+        for (var i = 0; i < roundsCount; i++) {
+            var randomNumber = 1 + (int) (Math.random() * maxRandomNumber);
             questions[i] = "" + randomNumber;
             correctAnswers[i] = isPrime(randomNumber);
         }

@@ -5,10 +5,11 @@ import hexlet.code.Engine;
 public class GameProgression {
     public static void generateProgression(String[] numbers) {
         final var maxStep = 5;
+        final var progressionLength = 10;
         var nextStep = 1 + (int) (Math.random() * maxStep);
         var stepSize = 1 + (int) (Math.random() * maxStep);
+
         numbers[0] = Integer.toString(nextStep);
-        final var progressionLength = 10;
 
         for (var i = 1; i < progressionLength; i++) {
             nextStep = nextStep + stepSize;
@@ -17,12 +18,13 @@ public class GameProgression {
     }
     public static void progression() {
         var task = "What number is missing in the progression?";
-        final var gameRounds = 3;
-        String[] questions = new String[gameRounds];
-        String[] correctAnswers = new String[gameRounds];
+        final var roundsCount = 3;
+        final var progressionLength = 10;
 
-        for (var i = 0; i < gameRounds; i++) {
-            final var progressionLength = 10;
+        String[] questions = new String[roundsCount];
+        String[] correctAnswers = new String[roundsCount];
+
+        for (var i = 0; i < roundsCount; i++) {
             String[] numbers = new String[progressionLength];
             generateProgression(numbers);
 
