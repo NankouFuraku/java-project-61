@@ -37,7 +37,7 @@ class App {
                 GamePrime.prime();
                 break;
             default:
-                break;
+                System.out.println("Sorry, you didn't chose any valid option!");
         }
 
         scanner.close();
