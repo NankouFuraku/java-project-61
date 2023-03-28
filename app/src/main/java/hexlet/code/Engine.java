@@ -14,20 +14,17 @@ public class Engine {
 
         System.out.println(task);
 
-        var i = 0;
-
-        while (i < ROUNDS_COUNT) {
+        for (String[] oneRound: data) {
             System.out.print("Question: ");
-            System.out.println(data[0][i]);
+            System.out.println(oneRound[0]);
             System.out.print("Your answer: ");
             String playerAnswer = scanner.next();
 
-            if (data[1][i].equals(playerAnswer)) {
+            if (oneRound[1].equals(playerAnswer)) {
                 System.out.println("Correct!");
-                i++;
             } else {
                 System.out.println("'" + playerAnswer + "' is wrong answer ;(. Correct answer was '"
-                        + data[1][i] + "'");
+                        + oneRound[1] + "'");
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }

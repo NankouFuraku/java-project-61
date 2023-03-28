@@ -37,7 +37,7 @@ class App {
                 GamePrime.prime();
                 break;
             default:
-                System.out.println("Sorry, you didn't chose any valid option!");
+                throw new RuntimeException("Unknown input: " + gameOption);
         }
 
         scanner.close();
