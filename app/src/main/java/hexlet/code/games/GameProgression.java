@@ -9,10 +9,10 @@ public class GameProgression {
     private static final int MAX_STEP = 5;
     private static final int MIN_RANDOM_NUMBER = 1;
 
-    public static String[] generateProgression(int firstStep, int nextStep, int length) {
-        String[] numbers = new String[length];
+    public static String[] generateProgression(int firstStep, int nextStep, int progressionLength) {
+        String[] numbers = new String[progressionLength];
 
-        for (var i = 0; i < length; i++) {
+        for (var i = 0; i < progressionLength; i++) {
             numbers[i] = Integer.toString(firstStep + i * nextStep);
         }
         return numbers;

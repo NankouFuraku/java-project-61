@@ -17,7 +17,7 @@ public class GameCalc {
             var num1 = Utils.generateNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
             var num2 = Utils.generateNumber(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
 
-            data[i][0] = "" + num1 + operator + num2;
+            data[i][0] = "" + num1 + " " + operator + " " + num2;
             data[i][1] = Integer.toString(Utils.calculate(num1, num2, operator));
         }
 
