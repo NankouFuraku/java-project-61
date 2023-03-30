@@ -7,6 +7,7 @@ public class GamePrime {
     private static final String TASK = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MAX_RANDOM_NUMBER = 100;
     private static final int MIN_RANDOM_NUMBER = 1;
+
     public static boolean isPrime(int number) {
         if (number < 2) {
             return false;
