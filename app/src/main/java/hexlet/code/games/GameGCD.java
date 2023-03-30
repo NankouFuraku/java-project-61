@@ -7,6 +7,7 @@ public class GameGCD {
     private static final String TASK = "Find the greatest common divisor of given numbers.";
     private static final int MAX_RANDOM_NUMBER = 100;
     private static final int MIN_RANDOM_NUMBER = 1;
+
     public static int getDivisor(int num1, int num2) {
         var divisor = Math.min(num1, num2);
 
@@ -19,6 +20,7 @@ public class GameGCD {
         }
         return divisor;
     }
+
     public static void gcd() {
         String[][] data = new String[Engine.ROUNDS_COUNT][2];
 

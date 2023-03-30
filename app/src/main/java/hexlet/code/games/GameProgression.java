@@ -9,14 +9,15 @@ public class GameProgression {
     private static final int MAX_STEP = 5;
     private static final int MIN_RANDOM_NUMBER = 1;
 
-    public static String[] generateProgression(int firstStep, int nextStep) {
-        String[] numbers = new String[PROGRESSION_LENGTH];
+    public static String[] generateProgression(int firstStep, int nextStep, int length) {
+        String[] numbers = new String[length];
 
-        for (var i = 0; i < PROGRESSION_LENGTH; i++) {
+        for (var i = 0; i < length; i++) {
             numbers[i] = Integer.toString(firstStep + i * nextStep);
         }
         return numbers;
     }
+
     public static void progression() {
         String[][] data = new String[Engine.ROUNDS_COUNT][2];
 
@@ -24,7 +25,7 @@ public class GameProgression {
             var firstStep = Utils.generateNumber(MIN_RANDOM_NUMBER, MAX_STEP);
             var nextStep = Utils.generateNumber(MIN_RANDOM_NUMBER, MAX_STEP);
 
-            var progression = generateProgression(firstStep, nextStep);
+            var progression = generateProgression(firstStep, nextStep, PROGRESSION_LENGTH);
 
             var replacementIndex = Utils.generateNumber(1, PROGRESSION_LENGTH - 1);
             data[i][1] = progression[replacementIndex];
